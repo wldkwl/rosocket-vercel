@@ -1,15 +1,20 @@
 {
-    "name": "RoSocket/rosocket",
-    "version": "1.0.1",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/RoSocket/rosocket.git"
-    },
-    "contributors": [
-        "sturmgeisty"
-    ],
-    "bugs": {
-        "url": "https://github.com/RoSocket/rosocket/issues"
-    }
+  "name": "rosocket-server",
+  "version": "1.0.0",
+  "description": "Node backend server for RoSocket.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo Hello World!"
+  },
+  "keywords": [
+    "server",
+    "node.js server",
+    "rosocket"
+  ],
+  "author": "sturmgeisty",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "ws": "^8.17.1"
+  }
 }
