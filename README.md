@@ -114,5 +114,5 @@ npm install express ws
 
 ## .
 ```url
-https://google.com
+https://rosocket-vercel.vercel.app/
 ```
