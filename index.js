@@ -77,6 +77,7 @@ app.post('/connect', async (req, res) => {
         errors: [] // Initialize the errors array here
     };
     handleWebSocketConnection(UUID, socket);
+    console.log(connections)
 
     res.json({ UUID, Socket, success: true });
 });
