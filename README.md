@@ -114,5 +114,6 @@ npm install express ws
 
 ## .
 ```url
-https://rosocket-vercel.vercel.app/
+~~https://rosocket-vercel.vercel.app/~~
+will not save connections
 ```
