@@ -71,7 +71,11 @@ app.post('/connect', async (req, res) => {
         return res.status(500).json({ success: false, error: "WebSocket connection error" });
     }
 
-    connections[UUID] = { socket: socket, messages: [] };
+    connections[UUID] = { 
+        socket: socket, 
+        messages: [], 
+        errors: [] // Initialize the errors array here
+    };
     handleWebSocketConnection(UUID, socket);
 
     res.json({ UUID, Socket, success: true });
