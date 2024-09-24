@@ -8,8 +8,7 @@ const port = 6214;
 const connections = {};
 
 function isValidWebSocketURL(url) {
-    // return url.startsWith("wss://");
-    return true
+    return url.startsWith("wss://");
 }
 
 function generateUUID() {
@@ -54,10 +53,10 @@ app.post('/connect', async (req, res) => {
 
     try {
         await new Promise((resolve, reject) => {
-            // socket.on('error', (error) => {
-            //     console.error(`WebSocket error for UUID: ${UUID}`, error);
-            //     reject(error);
-            // });
+            socket.on('error', (error) => {
+                console.error(`WebSocket error for UUID: ${UUID}`, error);
+                reject(error);
+            });
             socket.on('open', () => {
                 resolve();
             });
