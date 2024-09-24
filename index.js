@@ -99,6 +99,7 @@ app.post('/disconnect', (req, res) => {
 
 app.post('/send', (req, res) => {
     const { UUID, Message } = req.body;
+    console.log(connections)
     if (!UUID || !Message) {
         return res.status(400).json({ success: false, error: "UUID or Message not provided!" });
     }
