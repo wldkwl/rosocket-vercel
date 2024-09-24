@@ -49,7 +49,13 @@ app.post('/connect', async (req, res) => {
     }
 
     const UUID = generateUUID();
-    const socket = new WebSocket(Socket);
+    const socket = new WebSocket(Socket, {
+        headers: {
+            "Origin": Socket,
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36",
+        },
+        origin: Socket,
+    });
 
     try {
         await new Promise((resolve, reject) => {
