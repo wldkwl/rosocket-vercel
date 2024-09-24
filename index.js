@@ -8,7 +8,8 @@ const port = 6214;
 const connections = {};
 
 function isValidWebSocketURL(url) {
-    return url.startsWith("wss://");
+    // return url.startsWith("wss://");
+    return true
 }
 
 function generateUUID() {
